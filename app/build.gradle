@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'MyAndroidKey'
+            keyPassword '1ng3L3ctr0n1c4'
+            storeFile file('C:/Users/Giovany/AndroidKeyStore/AndroidKeyStore.jks')
+            storePassword '1ng3L3ctr0n1c4'
+        }
+    }
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+    defaultConfig {
+        applicationId "com.garanal.elight"
+        minSdkVersion 11
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            zipAlignEnabled true
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.google.android.gms:play-services:7.3.0'
+    compile project(':mopub-sdk')
+}

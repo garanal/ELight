@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Linterna Fácil</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="btEncender">Encender</string>
+    <string name="btApagar">Apagar</string>
+    <string name="msgNoFlash">No hay flash</string>
+    <string name="msgAccessError">Ha habido un error accesando el flash de la cámara</string>
+    <string name="Notification_Tittle">Linterna Fácil</string>
+    <string name="Notification_Text">El flash de la cámara está encendido.</string>
+    <string name="Notification_Subtext">Toque aquí para ir a apagarlo.</string>
+    <string name="Notification_Ticker">Linterna encendida</string>
+    <string name="Widget_Text">Linterna\nFácil\nWidget</string>
+    <string name="Tap_Turn_On">Toque para encender</string>
+    <string name="Tap_Turn_Off">Toque para apagar</string>
+    <string name="Bottom_Message">Agregue el widget en la pantalla de inicio para usar ELight más rápidamente</string>
+</resources>

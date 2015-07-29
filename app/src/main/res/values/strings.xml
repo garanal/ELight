@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Easy Light</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="btEncender">Turn On</string>
+    <string name="btApagar">Turn Off</string>
+    <string name="msgNoFlash">There is no flash light</string>
+    <string name="msgAccessError">There\'s been an error accessing to the camera flash light</string>
+    <string name="Notification_Tittle">Easy Light</string>
+    <string name="Notification_Text">The camera flashlight is on.</string>
+    <string name="Notification_Subtext">Tap here to go and turn it off.</string>
+    <string name="Notification_Ticker">Flashlight on</string>
+    <string name="Widget_Text">Easy\nLight\nWidget</string>
+    <string name="Tap_Turn_On">Tap to turn on</string>
+    <string name="Tap_Turn_Off">Tap to turn off</string>
+    <string name="Bottom_Message">Add the widget to the home screen so you can use ELight more quickly</string>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.garanal.elight" >
+
+    <!-- Permissions to use the camera flashlight -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <!-- Permission for MoPub -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/elight_on"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="ServiceActivity"
+            android:enabled="true" />
+        <receiver android:name="WidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidgetproviderinfo" />
+        </receiver>
+
+        <!-- Activities for MoPub -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="com.mopub.mobileads.MoPubActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.mopub.mobileads.MraidActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.mopub.common.MoPubBrowser"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+    </application>
+
+</manifest>
